@@ -7,7 +7,7 @@ const Counter = ({ getCount }) => {
   useEffect(() => {
     const counter = getCount();
     setState(counter);
-  }, [getCount])
+  }, [getCount]);
 
   return (
     <div className={styles.container}>
@@ -65,7 +65,7 @@ const Clock = () => {
   }, [count]);
   
   useEffect(() => {
-    setCount(count + 1);
+    setCount(count => count + 1);
   }, [date]);
 
   return (
